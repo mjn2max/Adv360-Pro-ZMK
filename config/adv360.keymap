@@ -51,9 +51,9 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4                  &kp F5                   &kp F6  &tog 1                                                                 &mo 3          &kp F7  &kp F8                &kp F9                  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans                  &trans                   &trans  &none                                                                  &none          &trans  &trans                &trans                  &trans   &trans   &trans
-&trans  &trans  &trans  &trans                  &trans                   &trans  &none      &trans     &kp GLOBE             &trans         &trans      &none          &trans  &trans                &trans                  &trans   &trans   &trans
-&trans  &trans  &trans  &kp LG(C)               &kp LG(LA(LS(V)))        &trans                        &kp LEFT_CONTROL      &kp RIGHT_ALT                             &trans  &kp LG(LA(LS(V)))     &kp LG(C)               &trans   &trans   &trans
-&trans  &trans  &trans  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))          &kp SPACE  &kp ENTER  &trans                &kp GLOBE      &kp DELETE  &kp BACKSPACE          &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &trans   &trans   &trans
+&trans  &trans  &trans  &trans                  &trans                   &trans  &none      &kp GLOBE  &kp LEFT_CONTROL      &kp RIGHT_ALT  &kp GLOBE   &none          &trans  &trans                &trans                  &trans   &trans   &trans
+&trans  &trans  &trans  &kp LG(C)               &kp LG(LA(LS(V)))        &trans                        &trans                &trans                                    &trans  &kp LG(LA(LS(V)))     &kp LG(C)               &trans   &trans   &trans
+&trans  &trans  &trans  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))          &kp SPACE  &kp ENTER  &trans                &trans         &kp DELETE  &kp BACKSPACE          &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &trans   &trans   &trans
             >;
         };
 
