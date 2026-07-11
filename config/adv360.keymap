@@ -51,7 +51,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4                  &kp F5                   &kp F6          &tog 1                                                                   &mo 3          &kp F7             &kp F8                &kp F9                  &kp F10          &kp F11  &kp F12
 &trans  &trans  &trans  &trans                  &trans                   &trans          &kp LC(F5)                                                               &kp RC(F5)     &trans             &trans                &trans                  &trans           &trans   &trans
-&trans  &trans  &trans  &trans                  &trans                   &kp UP_ARROW    &kp LC(F4)  &kp LC(F2)  &kp LEFT_CONTROL      &kp RIGHT_ALT  &kp RC(F8)  &kp RC(F4)     &kp LG(LA(LS(V)))  &trans                &trans                  &trans           &trans   &trans
+&trans  &trans  &trans  &trans                  &trans                   &kp UP_ARROW    &kp LC(F4)  &kp LC(F2)  &kp LEFT_CONTROL      &kp RIGHT_ALT  &kp RC(F2)  &kp RC(F4)     &kp LG(LA(LS(V)))  &trans                &trans                  &trans           &trans   &trans
 &trans  &trans  &trans  &trans                  &kp LG(LA(LS(V)))        &kp DOWN_ARROW                          &trans                &trans                                    &kp RG(V)          &kp RG(C)             &kp LEFT_ARROW          &kp RIGHT_ARROW  &trans   &trans
 &trans  &trans  &trans  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(RIGHT_ARROW))                  &kp SPACE   &kp ENTER   &trans                &trans         &kp DELETE  &kp BACKSPACE                     &kp LA(LC(UP_ARROW))  &kp LA(LC(DOWN_ARROW))  &trans           &trans   &trans
             >;
