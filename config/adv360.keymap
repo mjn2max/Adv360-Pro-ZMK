@@ -19,14 +19,24 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hold_tap: hold_tap {
+        hold_to_tap_kp: hold_to_tap_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
+            label = "HOLD_TO_TAP_KP";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
+        };
+
+        hold_kp_tap_kp: hold_kp_tap_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_KP_TAP_KP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -36,62 +46,72 @@
         base {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &hold_tap 1 N2  &hold_tap 2 N3  &hold_tap 3 N4  &hold_tap 4 N5  &to 7                                                                                     &to 5              &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W           &kp E           &kp R           &kp T           &kp LC(UP)                                                                                &kp C_VOLUME_UP    &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S           &kp D           &kp F           &kp G           &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X           &kp C           &kp V           &kp B                                            &kp LC(F4)         &kp PAGE_UP                                              &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 6      &kp GRAVE  &kp CAPS        &kp LEFT        &kp RIGHT                       &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                  &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 6
+&kp EQUAL  &kp N1     &hold_to_tap_kp 2 N2  &hold_to_tap_kp 3 N3  &hold_to_tap_kp 4 N4  &hold_to_tap_kp 5 N5  &to 8                                                                                     &to 6              &hold_kp_tap_kp LG(LC(LA(LS(C)))) N6  &hold_kp_tap_kp LG(LC(LA(LS(N)))) N7  &hold_to_tap_kp 8 N8  &hold_to_tap_kp 9 N9  &hold_to_tap_kp 10 N0  &kp MINUS
+&kp TAB    &kp Q      &kp W                 &kp E                 &kp R                 &kp T                 &kp LC(UP)                                                                                &kp C_VOLUME_UP    &kp Y                                 &kp U                                 &kp I                 &kp O                 &kp P                  &kp BSLH
+&kp ESC    &kp A      &kp S                 &kp D                 &kp F                 &kp G                 &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp H                                 &kp J                                 &kp K                 &kp L                 &kp SEMI               &kp SQT
+&kp LSHFT  &kp Z      &kp X                 &kp C                 &kp V                 &kp B                                                  &kp LC(F4)         &kp PAGE_UP                                              &kp N                                 &kp M                                 &kp COMMA             &kp DOT               &kp FSLH               &kp RSHFT
+&mo 7      &kp GRAVE  &kp CAPS              &kp LEFT              &kp RIGHT                                   &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                                &kp UP                                &kp DOWN              &kp LBKT              &kp RBKT               &mo 7
+            >;
+        };
+
+        empty {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none                                  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none                                  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none      &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
         controls-1 {
             bindings = <
-&kp LG(GRAVE)  &to 0          &none                     &kp LC(UP_ARROW)          &kp LG(SPACE)              &kp LG(LS(SLASH))      &to 7                                                                                     &to 5              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none         &none          &none          &kp F11
+&kp LG(GRAVE)  &to 0          &none                     &kp LC(UP_ARROW)          &kp LG(SPACE)              &kp LG(LS(SLASH))      &to 8                                                                                     &to 6              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none         &none          &none          &kp F11
 &kp LC(F4)     &kp Q          &kp LG(W)                 &kp LS(LA(LC(LG(UP))))    &kp LG(ENTER)              &kp LS(LA(LC(LG(G))))  &kp LC(UP)                                                                                &kp C_VOLUME_UP    &kp LS(LA(LC(LG(G))))  &kp LG(ENTER)          &kp UP        &kp LC(ENTER)  &none          &kp LC(LEFT)
 &kp ESCAPE     &kp LG(A)      &kp LS(LA(LC(LG(LEFT))))  &kp LS(LA(LC(LG(DOWN))))  &kp LS(LA(LC(LG(RIGHT))))  &kp LC(DOWN)           &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp LC(DOWN)           &kp LEFT               &kp DOWN      &kp RIGHT      &none          &kp LC(RIGHT)
 &kp LSHIFT     &kp LG(Z)      &kp LG(X)                 &kp LG(C)                 &kp LG(V)                  &kp LG(M)                                               &kp LC(F4)         &kp PAGE_UP                                              &kp LG(N)              &kp LG(M)              &kp LC(LEFT)  &kp LC(RIGHT)  &kp LG(SLASH)  &kp RIGHT_SHIFT
-&mo 6          &kp LG(GRAVE)  &none                     &kp LEFT                  &kp RIGHT                                         &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN      &none          &none          &mo 6
+&mo 7          &kp LG(GRAVE)  &none                     &kp LEFT                  &kp RIGHT                                         &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN      &none          &none          &mo 7
             >;
         };
 
         arrows-2 {
             bindings = <
-&none       &to 0           &none             &none          &none              &none                  &to 7                                                                                     &to 5              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none     &none      &none              &none
+&none       &to 0           &none             &none          &none              &none                  &to 8                                                                                     &to 6              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none     &none      &none              &none
 &kp TAB     &kp LS(LA(UP))  &kp LS(LA(LEFT))  &kp UP         &kp LS(LA(RIGHT))  &kp LS(LA(LG(LC(G))))  &kp LC(UP)                                                                                &kp C_VOLUME_UP    &none                  &none                  &kp UP    &none      &none              &none
 &kp ESC     &kp LA(LEFT)    &kp LEFT          &kp DOWN       &kp RIGHT          &kp LA(RIGHT)          &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp LA(LEFT)           &kp LEFT               &kp DOWN  &kp RIGHT  &kp LA(RIGHT)      &none
 &kp LSHIFT  &kp LG(Z)       &none             &kp LG(SLASH)  &kp LG(N)          &kp LG(O)                                               &kp LC(F4)         &kp PAGE_UP                                              &none                  &none                  &none     &none      &kp LC(LG(SPACE))  &kp RSHIFT
-&mo 6       &none           &none             &kp LEFT       &kp RIGHT                                 &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN  &none      &none              &mo 6
+&mo 7       &none           &none             &kp LEFT       &kp RIGHT                                 &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN  &none      &none              &mo 7
             >;
         };
 
         vscode-3 {
             bindings = <
-&none       &to 0      &none      &none          &none          &none          &to 7                                                                                     &tog 5             &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none          &none     &none          &none
+&none       &to 0      &none      &none          &none          &none          &to 8                                                                                     &tog 6             &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none          &none     &none          &none
 &kp TAB     &kp Q      &kp LG(W)  &kp LG(LS(E))  &kp LG(ENTER)  &kp LG(GRAVE)  &kp LC(UP)                                                                                &kp C_VOLUME_UP    &none                  &kp LG(ENTER)          &kp LG(LC(I))  &none     &kp LG(LS(P))  &none
 &kp ESC     &kp LG(A)  &kp LG(S)  &kp LG(D)      &kp LG(LS(F))  &kp LG(G)      &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp LG(LS(V))          &none                  &none          &none     &none          &none
 &kp LSHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp F5                                          &kp LC(F4)         &kp PAGE_UP                                              &kp LG(N)              &kp LG(LC(LS(M)))      &none          &none     &kp LG(SLASH)  &none
-&mo 6       &kp GRAVE  &none      &kp LEFT       &kp RIGHT                     &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN       &kp LBKT  &kp RBKT       &mo 6
+&mo 7       &kp GRAVE  &none      &kp LEFT       &kp RIGHT                     &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN       &kp LBKT  &kp RBKT       &mo 7
             >;
         };
 
         xcode-4 {
             bindings = <
-&none       &to 0              &none             &none             &none              &none                  &to 7                                                                                     &to 5              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none              &none          &none          &none
+&none       &to 0              &none             &none             &none              &none                  &to 8                                                                                     &to 6              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none              &none          &none          &none
 &kp TAB     &kp LG(LS(N2))     &kp LG(W)         &kp LG(LA(LBKT))  &kp LG(R)          &kp LG(LC(LA(LS(G))))  &kp LC(UP)                                                                                &kp C_VOLUME_UP    &kp LG(LA(LS(ENTER)))  &kp LG(U)              &kp LC(I)          &kp LG(LS(O))  &kp LG(LS(P))  &none
 &kp ESC     &kp LG(LC(LS(A)))  &kp LG(LA(LEFT))  &kp LG(LA(RBKT))  &kp LG(LA(RIGHT))  &kp LG(LC(LA(LS(X))))  &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp LG(LA(ENTER))      &kp LG(LS(J))          &kp LG(LS(K))      &kp LG(LA(L))  &none          &none
 &kp LSHIFT  &kp LG(Z)          &kp LG(LC(LEFT))  &kp LG(LS(Y))     &kp LG(LC(RIGHT))  &kp LG(B)                                               &kp LC(F4)         &kp PAGE_UP                                              &kp LG(LA(LC(ENTER)))  &kp LG(LC(LS(M)))      &kp LG(LA(COMMA))  &kp LG(DOT)    &kp LG(SLASH)  &kp RSHIFT
-&mo 6       &kp GRAVE          &none             &kp LEFT          &kp RIGHT                                 &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN           &kp LBKT       &kp RBKT       &mo 6
+&mo 7       &kp GRAVE          &none             &kp LEFT          &kp RIGHT                                 &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                                 &kp UP                 &kp DOWN           &kp LBKT       &kp RBKT       &mo 7
             >;
         };
 
         mod-media {
             display-name = "Mod";
             bindings = <
-&none  &to 0  &none  &none       &none                         &none                 &to 7                                                                                     &none         &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))      &none           &none             &bt BT_SEL 0  &bt BT_SEL 1
+&none  &to 0  &none  &none       &none                         &none                 &to 8                                                                                     &none         &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))      &none           &none             &bt BT_SEL 0  &bt BT_SEL 1
 &none  &none  &none  &none       &kp LS(LA(C_BRIGHTNESS_INC))  &kp C_BRIGHTNESS_INC  &kp LC(UP)                                                                                &none         &kp C_VOLUME_UP        &kp LS(LA(C_VOLUME_UP))    &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &bt BT_SEL 2
 &none  &none  &none  &none       &kp LS(LA(C_BRIGHTNESS_DEC))  &kp C_BRIGHTNESS_DEC  &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &stp STP_BAT  &kp C_VOLUME_DOWN      &kp LS(LA(C_VOLUME_DOWN))  &none           &none             &none         &bt BT_SEL 3
 &none  &none  &none  &bt BT_CLR  &macro_ver                    &none                                                  &kp LC(F4)         &kp PAGE_UP                                         &none                  &kp K_MUTE                 &none           &none             &none         &bt BT_SEL 4
-&mo 6  &none  &none  &kp LEFT    &kp RIGHT                                           &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                            &bl BL_INC                 &bl BL_DEC      &bl BL_TOG        &none         &mo 6
+&mo 7  &none  &none  &kp LEFT    &kp RIGHT                                           &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                            &bl BL_INC                 &bl BL_DEC      &bl BL_TOG        &none         &mo 7
             >;
         };
 
@@ -109,21 +129,31 @@
         keypad {
             display-name = "Kp";
             bindings = <
-&none    &to 0       &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &none                                                                                     &to 5              &none       &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &none
+&none    &to 0       &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &none                                                                                     &to 6              &none       &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &none
 &kp TAB  &none       &kp KP_N7   &kp KP_N8     &kp KP_N9     &kp KP_MINUS     &kp LC(UP)                                                                                &kp C_VOLUME_UP    &none       &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &none
 &kp ESC  &kp KP_DOT  &kp KP_N4   &kp KP_N5     &kp KP_N6     &kp KP_PLUS      &kp LG(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &kp C_VOLUME_DOWN  &kp KP_DOT  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &none
 &none    &kp KP_N0   &kp KP_N1   &kp KP_N2     &kp KP_N3     &kp KP_ENTER                                      &kp LC(F4)         &kp PAGE_UP                                              &kp KP_N0   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &none
-&mo 6    &none       &kp KP_DOT  &kp LEFT      &kp RIGHT                      &kp BSPC       &kp DEL           &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                      &kp UP      &kp DOWN      &kp KP_DOT     &none            &mo 6
+&mo 7    &none       &kp KP_DOT  &kp LEFT      &kp RIGHT                      &kp BSPC       &kp DEL           &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                      &kp UP      &kp DOWN      &kp KP_DOT     &none            &mo 7
+            >;
+        };
+
+        f_keys {
+            bindings = <
+&none       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none                                                                                     &none      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&kp TAB     &kp Q   &kp W   &none   &none   &none   &none                                                                                     &none      &none   &none   &none   &none   &none    &kp F12
+&kp ESC     &none   &none   &none   &none   &none   &none          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &none      &none   &none   &none   &none   &none    &none
+&kp LSHIFT  &kp Z   &none   &none   &none   &none                                    &kp LC(UP)         &kp PAGE_UP                                      &none   &none   &none   &none   &none    &kp RSHIFT
+&none       &none   &none   &none   &none           &kp BACKSPACE  &kp DELETE        &kp LG(SPACE)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE          &none   &none   &none   &none    &none
             >;
         };
 
         windows {
             bindings = <
-&trans  &trans  &trans  &trans    &trans     &trans  &to 7                                                                                &to 5              &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans     &trans  &to 8                                                                                &to 6              &trans  &trans  &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans    &trans     &trans  &kp LC(UP)                                                                           &kp C_VOLUME_UP    &trans  &trans  &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans    &trans     &trans  &kp LG(SPACE)  &kp LEFT_CONTROL  &kp LEFT_ALT      &kp RIGHT_WIN  &kp RIGHT_CONTROL  &kp C_VOLUME_DOWN  &trans  &trans  &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans    &trans     &trans                                   &kp HOME          &kp PAGE_UP                                          &trans  &trans  &trans    &trans  &trans  &trans
-&mo 6   &trans  &trans  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp END           &kp PAGE_DOWN  &kp ENTER          &kp SPACE                  &kp UP  &kp DOWN  &trans  &trans  &mo 6
+&mo 7   &trans  &trans  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp END           &kp PAGE_DOWN  &kp ENTER          &kp SPACE                  &kp UP  &kp DOWN  &trans  &trans  &mo 7
             >;
         };
     };
