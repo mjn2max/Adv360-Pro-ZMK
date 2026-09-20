@@ -56,21 +56,21 @@
 
         vscode-3 {
             bindings = <
-&trans  &to 0   &trans  &trans    &trans     &trans  &to 7                                                                                     &tog 5     &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none     &none   &none   &none
-&trans  &trans  &trans  &trans    &trans     &trans  &to 1                                                                                     &none      &trans                 &trans                 &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &to 4      &trans                 &trans                 &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans                                   &kp LC(F4)         &kp PAGE_UP                                      &trans                 &trans                 &trans    &trans  &trans  &trans
-&mo 6   &trans  &trans  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                         &kp UP                 &kp DOWN  &trans  &trans  &mo 6
+&none       &to 0      &none      &none          &none          &none          &to 7                                                                                     &tog 5     &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none          &none     &none          &none
+&kp TAB     &kp Q      &kp LG(W)  &kp LG(LS(E))  &kp LG(ENTER)  &kp LG(GRAVE)  &to 1                                                                                     &none      &none                  &kp LG(ENTER)          &kp LG(LC(I))  &none     &kp LG(LS(P))  &none
+&kp ESC     &kp LG(A)  &kp LG(S)  &kp LG(D)      &kp LG(LS(F))  &kp LG(G)      &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &to 4      &kp LG(LS(V))          &none                  &none          &none     &none          &none
+&kp LSHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp F5                                          &kp LC(F4)         &kp PAGE_UP                                      &kp LG(N)              &kp LG(LC(LS(M)))      &none          &none     &kp LG(SLASH)  &none
+&mo 6       &kp GRAVE  &none      &kp LEFT       &kp RIGHT                     &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                         &kp UP                 &kp DOWN       &kp LBKT  &kp RBKT       &mo 6
             >;
         };
 
         xcode-4 {
             bindings = <
-&trans  &to 0   &trans  &trans    &trans     &trans  &to 7                                                                                     &to 5      &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none     &none   &none   &none
-&trans  &trans  &trans  &trans    &trans     &trans  &to 1                                                                                     &to 3      &trans                 &trans                 &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &none      &trans                 &trans                 &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans                                   &kp LC(F4)         &kp PAGE_UP                                      &trans                 &trans                 &trans    &trans  &trans  &trans
-&mo 6   &trans  &trans  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                         &kp UP                 &kp DOWN  &trans  &trans  &mo 6
+&none   &to 0   &none   &none     &none      &none   &to 7                                                                                     &to 5      &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none     &none     &none     &none
+&trans  &trans  &trans  &trans    &trans     &trans  &to 1                                                                                     &to 3      &trans                 &trans                 &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans     &trans  &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &none      &trans                 &trans                 &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans     &trans                                   &kp LC(F4)         &kp PAGE_UP                                      &trans                 &trans                 &trans    &trans    &trans    &trans
+&mo 6   &trans  &trans  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                         &kp UP                 &kp DOWN  &kp LBKT  &kp RBKT  &mo 6
             >;
         };
 
