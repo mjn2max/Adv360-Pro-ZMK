@@ -66,11 +66,11 @@
 
         xcode-4 {
             bindings = <
-&none   &to 0   &none   &none     &none      &none   &to 7                                                                                     &to 5      &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none     &none     &none     &none
-&trans  &trans  &trans  &trans    &trans     &trans  &to 1                                                                                     &to 3      &trans                 &trans                 &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &none      &trans                 &trans                 &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans    &trans     &trans                                   &kp LC(F4)         &kp PAGE_UP                                      &trans                 &trans                 &trans    &trans    &trans    &trans
-&mo 6   &trans  &trans  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                         &kp UP                 &kp DOWN  &kp LBKT  &kp RBKT  &mo 6
+&none       &to 0              &none             &none             &none              &none                  &to 7                                                                                     &to 5      &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &none              &none          &none          &none
+&kp TAB     &kp LG(LS(N2))     &kp LG(W)         &kp LG(LA(LBKT))  &kp LG(R)          &kp LG(LC(LA(LS(G))))  &to 1                                                                                     &to 3      &kp LG(LA(LS(ENTER)))  &kp LG(U)              &kp LC(I)          &kp LG(LS(O))  &kp LG(LS(P))  &none
+&kp ESC     &kp LG(LC(LS(A)))  &kp LG(LA(LEFT))  &kp LG(LA(RBKT))  &kp LG(LA(RIGHT))  &kp LG(LC(LA(LS(X))))  &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &none      &kp LG(LA(ENTER))      &kp LG(LS(J))          &kp LG(LS(K))      &kp LG(LA(L))  &none          &none
+&kp LSHIFT  &kp LG(Z)          &kp LG(LC(LEFT))  &kp LG(LS(Y))     &kp LG(LC(RIGHT))  &kp LG(B)                                               &kp LC(F4)         &kp PAGE_UP                                      &kp LG(LA(LC(ENTER)))  &kp LG(LC(LS(M)))      &kp LG(LA(COMMA))  &kp LG(DOT)    &kp LG(SLASH)  &kp RSHIFT
+&mo 6       &kp GRAVE          &none             &kp LEFT          &kp RIGHT                                 &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE                         &kp UP                 &kp DOWN           &kp LBKT       &kp RBKT       &mo 6
             >;
         };
 
