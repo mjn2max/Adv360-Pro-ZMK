@@ -18,6 +18,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&kp>;
+        };
     };
 
     keymap {
@@ -26,11 +36,11 @@
         base {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &to 7                                                                                     &to 5      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &to 1                                                                                     &to 3      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &to 4      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                    &kp LC(F4)         &kp PAGE_UP                                      &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 6      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 6
+&kp EQUAL  &kp N1     &hold_tap 1 N2  &hold_tap 2 N3  &hold_tap 3 N4  &hold_tap 4 N5  &to 7                                                                                     &to 5      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W           &kp E           &kp R           &kp T           &to 1                                                                                     &to 3      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S           &kp D           &kp F           &kp G           &to 2          &kp LEFT_COMMAND  &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND  &to 4      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X           &kp C           &kp V           &kp B                                            &kp LC(F4)         &kp PAGE_UP                                      &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 6      &kp GRAVE  &kp CAPS        &kp LEFT        &kp RIGHT                       &kp BACKSPACE  &kp DELETE        &kp LG(ENTER)      &kp PAGE_DOWN      &kp ENTER          &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 6
             >;
         };
 
