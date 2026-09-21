@@ -66,7 +66,7 @@
 
         vscode_4 {
             bindings = <
-&none       &to 0      &to 8      &to 7          &none          &to 2          &to 3                                                                                                   &tog 4             &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &to 3          &to 5     &to 6          &none
+&none       &to 0      &to 8      &to 7          &none          &to 2          &to 3                                                                                                   &to 4              &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(N))))  &to 3          &to 5     &to 6          &none
 &kp TAB     &kp Q      &kp LG(W)  &kp LG(LS(E))  &kp LG(ENTER)  &kp LG(GRAVE)  &kp LC(UP)                                                                                              &kp C_VOLUME_UP    &none                  &kp LG(ENTER)          &kp LG(LC(I))  &none     &kp LG(LS(P))  &none
 &kp ESC     &kp LG(A)  &kp LG(S)  &kp LG(D)      &kp LG(LS(F))  &kp LG(G)      &kp LG(SPACE)  &kp LEFT_COMMAND          &kp LEFT_ALT       &kp RIGHT_CONTROL  &kp RIGHT_COMMAND        &kp C_VOLUME_DOWN  &kp LG(LS(V))          &none                  &none          &none     &none          &none
 &kp LSHIFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)      &kp LG(V)      &kp F5                                                  &kp LC(F4)         &kp PAGE_UP                                                    &kp LG(N)              &kp LG(LC(LS(M)))      &none          &none     &kp LG(SLASH)  &none
